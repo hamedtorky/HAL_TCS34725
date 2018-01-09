@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"rgbtest\startup_stm32f103xb.o"
+"rgbtest\gpio.o"
+"rgbtest\stm32f1xx_it.o"
+"rgbtest\main.o"
+"rgbtest\i2c.o"
+"rgbtest\stm32f1xx_hal_msp.o"
+"rgbtest\tsc3472.o"
+"rgbtest\stm32f1xx_hal_pwr.o"
+"rgbtest\stm32f1xx_hal_rcc.o"
+"rgbtest\stm32f1xx_hal_dma.o"
+"rgbtest\stm32f1xx_hal_tim.o"
+"rgbtest\stm32f1xx_hal_cortex.o"
+"rgbtest\stm32f1xx_hal.o"
+"rgbtest\stm32f1xx_hal_rcc_ex.o"
+"rgbtest\stm32f1xx_hal_gpio.o"
+"rgbtest\stm32f1xx_hal_gpio_ex.o"
+"rgbtest\stm32f1xx_hal_i2c.o"
+"rgbtest\stm32f1xx_hal_flash.o"
+"rgbtest\stm32f1xx_hal_flash_ex.o"
+"rgbtest\stm32f1xx_hal_tim_ex.o"
+"rgbtest\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "rgbTest\rgbTest.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "rgbTest.map" -o rgbTest\rgbTest.axf
