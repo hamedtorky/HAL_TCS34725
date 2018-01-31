@@ -21,3 +21,20 @@ based products such as cell phones, notebooks, and TVs to sense the lighting env
 enable automatic display brightness for optimal viewing and power savings. The TCS3472, itself, can enter a
 lower-power 
 wait state between light sensing measurements to further reduce the average power consumption
+
+test function 
+```cpp
+  void tcs3472_test( void ) 
+  {
+    uint16_t r, g, b, c, colorTemp, lux;
+    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+    tcs3272_init();
+
+    getRawData(&r, &g, &b, &c);
+    colorTemp = calculateColorTemperature(r, g, b);
+    lux = calculateLux(r, g, b);
+
+
+
+  }
+```
